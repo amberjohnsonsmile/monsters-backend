@@ -1,4 +1,5 @@
 module.exports = {
+
     monsters: [{
         id: 1,
         type: "scaly",
@@ -14,6 +15,7 @@ module.exports = {
         type: "electric",
         image_url: "https://cdn.pixabay.com/photo/2016/01/10/14/14/monster-1131843_960_720.png"
     }],
+
     translators: [{
         id: 1,
         translator: "backwards"

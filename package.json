@@ -4,7 +4,7 @@
   "description": "server for Monsters web app",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/amberjohnsonsmile/monsters-backend/issues"
   },
-  "homepage": "https://github.com/amberjohnsonsmile/monsters-backend#readme"
+  "homepage": "https://github.com/amberjohnsonsmile/monsters-backend#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mocha": "^4.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
 }
