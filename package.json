@@ -1,28 +1,30 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "server for Monsters web app",
-  "main": "app.js",
-  "scripts": {
-    "test": "mocha"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/amberjohnsonsmile/monsters-backend.git"
-  },
-  "author": "Amber Johnson",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/amberjohnsonsmile/monsters-backend/issues"
-  },
-  "homepage": "https://github.com/amberjohnsonsmile/monsters-backend#readme",
-  "dependencies": {
-    "chai": "^4.1.2",
-    "cors": "^2.8.4",
-    "express": "^4.16.2",
-    "mocha": "^4.0.1"
-  },
-  "devDependencies": {
-    "nodemon": "^1.12.1"
-  }
+    "name": "server",
+    "version": "1.0.0",
+    "description": "server for Monsters web app",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "dev": "nodemon app.js",
+        "test": "mocha"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/amberjohnsonsmile/monsters-backend.git"
+    },
+    "author": "Amber Johnson",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/amberjohnsonsmile/monsters-backend/issues"
+    },
+    "homepage": "https://github.com/amberjohnsonsmile/monsters-backend#readme",
+    "dependencies": {
+        "chai": "^4.1.2",
+        "cors": "^2.8.4",
+        "express": "^4.16.2",
+        "mocha": "^4.0.1"
+    },
+    "devDependencies": {
+        "nodemon": "^1.12.1"
+    }
 }
