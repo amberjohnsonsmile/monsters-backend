@@ -1,3 +1,5 @@
+// not returning /monsters correctly!
+
 const express = require("express");
 const cors = require("cors");
 const queries = require("./queries");
@@ -31,10 +33,12 @@ const app = express();
 app.use(cors());
 
 app.get("/", function(request, response) {
+    queries.resetMonsters(monsters);
     response.json({monsters, translators});
 });
 
 app.get("/monsters", function(request, response) {
+    queries.resetMonsters(monsters);
     response.json({monsters});
 });
 

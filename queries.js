@@ -1,14 +1,22 @@
 function monstersPlusTranslators(monsters, translators) {
-    for (i = 0; i < monsters.length; i++) {
+    let combined = monsters;
+    for (i = 0; i < combined.length; i++) {
         for (j = 0; j < translators.length; j++) {
-            if (monsters[i].id === translators[j].id) {
-                monsters[i].translator = translators[j].translator;
+            if (combined[i].id === translators[j].id) {
+                combined[i].translator = translators[j].translator;
             }
         }
     }
-    return monsters;
+    return combined;
+}
+
+function resetMonsters(monsters) {
+    monsters.map(function(item) {
+        delete item.translator;
+    })
 }
 
 module.exports = {
-    monstersPlusTranslators
+    monstersPlusTranslators,
+    resetMonsters
 };
