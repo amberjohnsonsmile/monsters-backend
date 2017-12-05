@@ -50,4 +50,7 @@ app.get("/combined", function(request, response) {
     response.json({combined: queries.monstersPlusTranslators(monsters, translators)});
 });
 
+// add app.post to handle post requests
+// add app.use to handle error requests
+
 app.listen(process.env.PORT || 3000);
