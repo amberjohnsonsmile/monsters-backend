@@ -1,8 +1,7 @@
-// not returning /monsters correctly!
-
 const express = require("express");
 const cors = require("cors");
 const queries = require("./queries");
+const bodyParser = require("body-parser");
 
 let monsters = [{
     id: 1,
@@ -31,16 +30,20 @@ let translators = [{
 
 const app = express();
 app.use(cors());
+app.use(bodyParser.json());
 
 app.get("/", function(request, response) {
     queries.resetMonsters(monsters);
     response.json({monsters, translators});
 });
 
-app.get("/monsters", function(request, response) {
-    queries.resetMonsters(monsters);
-    response.json({monsters});
-});
+function appGetMonsters() {
+    app.get("/monsters", function(request, response) {
+        queries.resetMonsters(monsters);
+        response.json({monsters});
+    });
+}
+appGetMonsters();
 
 app.get("/translators", function(request, response) {
     response.json({translators});
@@ -50,7 +53,13 @@ app.get("/combined", function(request, response) {
     response.json({combined: queries.monstersPlusTranslators(monsters, translators)});
 });
 
-// add app.post to handle post requests
-// add app.use to handle error requests
+app.post("/combined", function(request, response) {
+    response.send({
+        message: "You sent something!",
+        body: request.body
+    });
+    monsters.push(request.body.combined);
+    appGetMonsters();
+});
 
 app.listen(process.env.PORT || 3000);
