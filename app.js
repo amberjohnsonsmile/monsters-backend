@@ -43,6 +43,7 @@ function appGetMonsters() {
         response.json({monsters});
     });
 }
+
 appGetMonsters();
 
 app.get("/translators", function(request, response) {
