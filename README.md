@@ -19,4 +19,4 @@ Build an API that reads and writes data.
 * You should have at least 2 collections of items. For example, if you make a school app, you should at a minimum have something like `students` and `classes`.
 * You need to write some data transformation that combines the two objects. For example, combine classes and students together into one data structure.
 * Your data transformations should have unit tests
-* Deploy your back-end
+* Deploy your back-end 
