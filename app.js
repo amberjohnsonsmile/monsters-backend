@@ -54,12 +54,12 @@ app.get("/combined", function(request, response) {
 });
 
 app.post("/combined", function(request, response) {
-    response.send({
-        message: "You sent something!",
-        body: request.body
-    });
     monsters.push(request.body.combined);
     appGetMonsters();
+    response.send({
+        message: "Monster received",
+        body: request.body
+    });
 });
 
 app.listen(process.env.PORT || 3000);
